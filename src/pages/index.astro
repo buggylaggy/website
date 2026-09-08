@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Buggy Laggy — Independent video game development" description="Buggy Laggy Limited is an independent video game development and publishing company.">
+  <header class="brand">
+    <h1>
+      <a class="brand-link" href="/" aria-label="Buggy Laggy's home">
+        <img class="logo" src="/logo.png" width="160" height="160" alt="" />BUGGY LAGGY'S
+      </a>
+    </h1>
+  </header>
+
+  <main class="hero">
+    <div class="hero-content">
+      <div class="intro">
+        <p>Independent video game development and publishing.</p>
+        <p>We make indie games.</p>
+      </div>
+      <section class="project" aria-labelledby="project-title">
+        <h2 id="project-title">Current project: Buggy Laggy's Vector Campaign Simulator</h2>
+        <p>Coming late 2026.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="contact">
+      <span class="contact-label">Contact Us:</span>
+      <div class="icon-links">
+        <a class="icon-link" href="mailto:dev@buggylaggy.com" aria-label="Email Buggy Laggy" title="Email">
+          <img src="/icons/email.svg" width="123" height="89" alt="" />
+        </a>
+        <a class="icon-link" href="https://github.com/buggylaggy" target="_blank" rel="noreferrer" aria-label="Visit Buggy Laggy on GitHub" title="GitHub">
+          <img src="/icons/github.svg" width="512" height="500" alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="legal">
+      <p>© 2026 Buggy Laggy Limited</p>
+    </div>
+  </footer>
+</BaseLayout>
