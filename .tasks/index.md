@@ -2,9 +2,11 @@
 
 ## Current
 
-- [20260908-github-pages-publish](open/20260908-github-pages-publish.md) — active
+No open tasks.
 
 ## Archived
+
+- [20260908-github-pages-publish](archive/2026-09/20260908-github-pages-publish.md) — completed
 
 - [20260908-contact-icons-background](archive/2026-09/20260908-contact-icons-background.md) — completed
 
