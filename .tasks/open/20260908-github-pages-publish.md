@@ -14,7 +14,7 @@ Publish the Buggy Laggy website from a new `buggylaggy/website` GitHub repositor
 ## Acceptance
 
 - The public site says “We make indie games.”
-- The project heading says “Buggy Laggy's Vector Campaign.”
+- The project heading says “Current project: Buggy Laggy's Vector Campaign.”
 - The footer shows only “© 2026 Buggy Laggy Limited” on its legal side.
 - A new public GitHub repository named `buggylaggy/website` contains the validated project on `main`.
 - GitHub Pages is configured to deploy the existing GitHub Actions workflow and uses `buggylaggy.com` as its custom domain.
