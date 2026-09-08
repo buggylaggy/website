@@ -14,6 +14,7 @@ Publish the Buggy Laggy website from a new `buggylaggy/website` GitHub repositor
 ## Acceptance
 
 - The public site says “We make indie games.”
+- The project heading says “Buggy Laggy's Vector Campaign.”
 - The footer shows only “© 2026 Buggy Laggy Limited” on its legal side.
 - A new public GitHub repository named `buggylaggy/website` contains the validated project on `main`.
 - GitHub Pages is configured to deploy the existing GitHub Actions workflow and uses `buggylaggy.com` as its custom domain.
@@ -32,7 +33,7 @@ Excluded: DNS record changes, domain verification outside GitHub Pages, source c
 
 ## Execution slices
 
-1. Update the landing-page copy and footer. (active)
+1. Update the landing-page copy, project heading, and footer. (active)
 2. Build the static site and create/push the public repository. (pending)
 3. Configure and verify GitHub Pages with the requested custom domain. (pending)
 
