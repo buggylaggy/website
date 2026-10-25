@@ -2,9 +2,11 @@
 
 ## Current
 
-No open tasks.
+- [20261025-metro-tile-style](open/20261025-metro-tile-style.md) — designing — the page restyled in Errant Ant's VTile (Metro) tiles on vui-web; the proposed tile arrangement awaits review
 
 ## Archived
+
+- [20261025-errant-ant-listing](archive/2026-10/20261025-errant-ant-listing.md) — completed
 
 - [20260908-github-pages-publish](archive/2026-09/20260908-github-pages-publish.md) — completed
 

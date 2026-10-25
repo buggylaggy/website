@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Buggy Laggy — Independent video game development" description="Buggy Laggy Limited is an independent video game development and publishing company.">
+<BaseLayout title="Buggy Laggy — Independent game and app development" description="Buggy Laggy Limited is an independent game and app development and publishing company.">
   <header class="brand">
     <h1>
       <a class="brand-link" href="/" aria-label="Buggy Laggy's home">
@@ -13,12 +13,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <main class="hero">
     <div class="hero-content">
       <div class="intro">
-        <p>Independent video game development and publishing.</p>
-        <p>We make indie games.</p>
+        <p>Independent game and app development and publishing.</p>
+        <p>We make indie games and apps.</p>
       </div>
-      <section class="project" aria-labelledby="project-title">
-        <h2 id="project-title">Current project: Buggy Laggy's Vector Campaign</h2>
-        <p>Coming late 2026.</p>
+      <section class="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Current projects</h2>
+        <ul class="project-list">
+          <li class="project">
+            <h3>Buggy Laggy's Vector Campaign</h3>
+            <p>Coming late 2026.</p>
+          </li>
+          <li class="project">
+            <h3><a class="project-link" href="https://errantant.com">Errant Ant</a></h3>
+            <p class="project-description">A reader for language learners that counts each word you meet and keeps the sentences you met it in.</p>
+            <p>Coming soon.</p>
+          </li>
+        </ul>
       </section>
     </div>
   </main>
