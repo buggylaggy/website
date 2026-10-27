@@ -4,6 +4,8 @@
 
 ## Archived
 
+- [20261027-pixel-logo](archive/2026-10/20261027-pixel-logo.md) — completed
+
 - [20261025-metro-tile-style](archive/2026-10/20261025-metro-tile-style.md) — completed
 
 - [20261025-errant-ant-listing](archive/2026-10/20261025-errant-ant-listing.md) — completed

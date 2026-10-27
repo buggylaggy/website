@@ -20,7 +20,7 @@
 
 ::selection { background: rgba(73, 135, 224, 0.55); }
 
-/* The studio's logo before its name in the bar, as a small rounded square on the name's baseline. */
+/* The studio's logo before its name in the bar, on the name's baseline. */
 .vui-pivot-item[data-vui-page="home"]::before {
   content: "";
   display: inline-block;
@@ -28,8 +28,7 @@
   height: 0.95em;
   margin-right: 0.3em;
   vertical-align: -0.14em;
-  border-radius: 0.14em;
-  background: url("/logo.png") center / cover;
+  background: url("/logo.svg") center / contain no-repeat;
 }
 
 /* Errant Ant's art covers its tile at the art's shape, with the chip in the art's empty top corner. */
@@ -57,7 +56,6 @@
 .studio-logo {
   width: calc(34 * var(--vui-u));
   height: auto;
-  border-radius: calc(4 * var(--vui-u));
 }
 
 .studio-text {
