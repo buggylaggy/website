@@ -4,7 +4,8 @@ The static website for Buggy Laggy Limited: one page of tiles under a top bar, o
 Astro static site; its bar, tiles, motion and backdrop come from the shared `vui-web` package
 (`/home/yuki/project/VUI.Web`), pinned in `packages/`. The Errant Ant tile shows Errant Ant's main capsule
 (`public/errant-ant.webp`) and links to errantant.com. The logo, `public/logo.svg`, is a copy of
-`buggylaggy_logo_white.svg` from the ErrantAnt repository's `Assets/` folder, where the blue version and PNGs live.
+`buggylaggy_logo_white.svg` from the ErrantAnt repository's `Assets/` folder, where the blue version and PNGs live, as
+are `favicon.ico` (`buggylaggy_favicon.ico`) and `apple-touch-icon.png` (`buggylaggy_apple_touch_icon_180.png`).
 
 ## Local development
 

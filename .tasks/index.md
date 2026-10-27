@@ -4,6 +4,8 @@
 
 ## Archived
 
+- [20261027-favicon](archive/2026-10/20261027-favicon.md) — completed
+
 - [20261027-pixel-logo](archive/2026-10/20261027-pixel-logo.md) — completed
 
 - [20261025-metro-tile-style](archive/2026-10/20261025-metro-tile-style.md) — completed
