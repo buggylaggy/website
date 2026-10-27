@@ -1,4 +1,5 @@
 ---
+import "vui-web/vui.css";
 import "../styles/global.css";
 interface Props { title: string; description: string; }
 const { title, description } = Astro.props;
@@ -9,8 +10,8 @@ const { title, description } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#14171b" />
+    <meta name="theme-color" content="#11161d" />
     <title>{title}</title>
   </head>
-  <body><div class="site-shell"><slot /></div></body>
+  <body><slot /></body>
 </html>

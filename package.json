@@ -10,6 +10,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^7.3.1"
+    "astro": "^7.3.1",
+    "vui-web": "file:packages/vui-web-0.3.1.tgz"
   }
 }

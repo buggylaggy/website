@@ -2,9 +2,9 @@
 
 ## Current
 
-- [20261025-metro-tile-style](open/20261025-metro-tile-style.md) — designing — the page restyled in Errant Ant's VTile (Metro) tiles on vui-web; the proposed tile arrangement awaits review
-
 ## Archived
+
+- [20261025-metro-tile-style](archive/2026-10/20261025-metro-tile-style.md) — completed
 
 - [20261025-errant-ant-listing](archive/2026-10/20261025-errant-ant-listing.md) — completed
 

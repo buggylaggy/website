@@ -1,225 +1,85 @@
+/* Buggy Laggy's dark studio scheme for vui-web's tiles: the dark canvas, light ink and blue of the studio, light grid
+   lines, and a few deep tile colors. */
 :root {
   color-scheme: dark;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 16px;
-  line-height: 1.55;
-  --ink: #edf2f8;
-  --muted: #a6b1c0;
-  --accent: #8abaff;
-  --line: rgba(202, 219, 241, 0.2);
-}
+  --vui-canvas: #0b0f14;
+  --vui-chrome: #11161d;
+  --vui-ink: #edf2f8;
+  --vui-muted: #a6b1c0;
+  --vui-accent: var(--tile-blue);
+  --vui-tile-color: var(--tile-slate);
+  --vui-grid-ink: #cfe0ff;
+  --vui-grid-opacity: 0.09;
+  --vui-font: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-* { box-sizing: border-box; }
-
-html { min-height: 100%; background: #0b0f14; }
-
-body {
-  min-height: 100svh;
-  margin: 0;
-  color: var(--ink);
-  background-color: #0b0f14;
-  background-image:
-    linear-gradient(115deg, rgba(7, 11, 16, 0.82), rgba(7, 11, 16, 0.62)),
-    url("/background.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  --tile-blue: #2f6ac3;
+  --tile-navy: #1f2b3d;
+  --tile-slate: #3a4658;
+  --tile-steel: #2d5573;
 }
 
 ::selection { background: rgba(73, 135, 224, 0.55); }
 
-.site-shell {
-  width: min(100%, 72rem);
-  min-height: 100svh;
-  margin: 0 auto;
-  padding: clamp(1.4rem, 4vw, 3.5rem);
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
+/* The studio's logo before its name in the bar, as a small rounded square on the name's baseline. */
+.vui-pivot-item[data-vui-page="home"]::before {
+  content: "";
+  display: inline-block;
+  width: 0.95em;
+  height: 0.95em;
+  margin-right: 0.3em;
+  vertical-align: -0.14em;
+  border-radius: 0.14em;
+  background: url("/logo.png") center / cover;
 }
 
-.brand h1 {
-  margin: 0;
-  font-size: clamp(1.05rem, 2.3vw, 1.35rem);
-  font-weight: 650;
-  letter-spacing: 0.08em;
-  line-height: 1.2;
+/* Errant Ant's art covers its tile at the art's shape, with the chip in the art's empty top corner. */
+.errant-ant {
+  --vui-aspect: 1232 / 706;
 }
 
-.brand-link {
+.errant-ant .vui-tile-body {
+  position: static;
   display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  width: fit-content;
-  color: inherit;
-  text-decoration: none;
-  transition: color 150ms ease;
+  flex-direction: column;
 }
 
-.brand-link:hover {
-  color: var(--accent);
+.errant-ant .vui-tile-chip {
+  margin-top: 0;
+  font-size: calc(10 * var(--vui-u));
 }
 
-.brand-link:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 0.35rem;
-}
-
-.logo {
-  width: 3.25rem;
-  height: 3.25rem;
-  flex-shrink: 0;
-  border: 1px solid rgba(199, 221, 255, 0.18);
-  border-radius: 0.5rem;
-}
-
-.hero {
-  min-height: 0;
-  padding: clamp(3.5rem, 10vh, 7rem) 0;
-  display: grid;
-  place-items: center;
-}
-
-.hero-content {
-  width: min(100%, 43rem);
-  text-align: center;
-}
-
-p { margin: 0; }
-
-.intro p:first-child {
-  font-size: clamp(1.5rem, 4.1vw, 2.35rem);
-  font-weight: 520;
-  letter-spacing: -0.025em;
-  line-height: 1.25;
-}
-
-.intro p + p {
-  margin-top: 0.9rem;
-  color: var(--muted);
-  font-size: clamp(1rem, 2vw, 1.125rem);
-}
-
-.projects { margin-top: clamp(2.75rem, 6vw, 4.25rem); }
-
-h2 {
-  margin: 0 0 0.45rem;
-  color: var(--muted);
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-
-.project-list {
-  margin: 0.9rem 0 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 1.6rem;
-}
-
-.project h3 {
-  margin: 0 0 0.3rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.project p { font-size: 1.0625rem; }
-
-.project .project-description {
-  margin-bottom: 0.3rem;
-  color: var(--muted);
-  font-size: 1rem;
-}
-
-.project-link {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: var(--line);
-  text-underline-offset: 0.25em;
-  transition: color 150ms ease, text-decoration-color 150ms ease;
-}
-
-.project-link:hover {
-  color: var(--accent);
-  text-decoration-color: var(--accent);
-}
-
-.project-link:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 0.25rem;
-  border-radius: 0.2rem;
-}
-
-.site-footer {
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--line);
+.studio .vui-tile-body {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 1.5rem;
 }
 
-.contact {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+.studio-logo {
+  width: calc(34 * var(--vui-u));
+  height: auto;
+  border-radius: calc(4 * var(--vui-u));
 }
 
-.contact-label {
-  color: var(--muted);
-  font-size: 0.9rem;
+.studio-text {
+  margin: 0;
+  font-size: calc(13 * var(--vui-u));
+  line-height: 1.28;
 }
 
-.icon-links { display: flex; gap: 0.5rem; }
-
-.icon-link {
-  width: 2.4rem;
-  height: 2.4rem;
-  border: 1px solid rgba(202, 219, 241, 0.28);
-  border-radius: 0.5rem;
-  display: grid;
-  place-items: center;
-  background: rgba(13, 19, 28, 0.48);
-  transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
-}
-
-.icon-link img {
-  width: 1.05rem;
-  height: 1.05rem;
+/* A contact's icon in white in the middle of its tile. */
+.tile-icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: calc(16 * var(--vui-u));
+  margin: auto;
   object-fit: contain;
-  opacity: 0.9;
   filter: brightness(0) invert(1);
 }
 
-.icon-link:hover {
-  border-color: var(--accent);
-  background: rgba(70, 124, 194, 0.3);
-  transform: translateY(-1px);
-}
-
-.icon-link:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 0.25rem;
-}
-
-.legal {
-  color: var(--muted);
-  font-size: 0.8rem;
-  line-height: 1.45;
-  text-align: right;
-}
-
-.legal p + p { margin-top: 0.25rem; }
-
-@media (max-width: 38rem) {
-  .site-shell { padding: 1.25rem; }
-  .hero { padding: 3.5rem 0; }
-  .site-footer { align-items: flex-start; flex-direction: column; }
-  .legal { margin-left: auto; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .icon-link,
-  .brand-link,
-  .project-link { transition: none; }
+.site-footer {
+  padding: 0 var(--vui-page-x) calc(18 * var(--vui-u));
+  color: var(--vui-muted);
+  font-size: calc(7.5 * var(--vui-u));
 }

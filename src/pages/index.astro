@@ -1,52 +1,46 @@
 ---
+import PageBackdrop from "vui-web/PageBackdrop.astro";
+import Tile from "vui-web/Tile.astro";
+import TileGroup from "vui-web/TileGroup.astro";
+import TileWall from "vui-web/TileWall.astro";
+import TopBar from "vui-web/TopBar.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const items = [
+  { label: "BUGGY LAGGY'S", href: "/", page: "home" },
+  { label: "Errant Ant", href: "/#errant-ant" },
+  { label: "Contact", href: "/#contact" }
+];
 ---
 <BaseLayout title="Buggy Laggy — Independent game and app development" description="Buggy Laggy Limited is an independent game and app development and publishing company.">
-  <header class="brand">
-    <h1>
-      <a class="brand-link" href="/" aria-label="Buggy Laggy's home">
-        <img class="logo" src="/logo.png" width="160" height="160" alt="" />BUGGY LAGGY'S
-      </a>
-    </h1>
-  </header>
+  <PageBackdrop />
+  <TopBar items={items} current="home" />
 
-  <main class="hero">
-    <div class="hero-content">
-      <div class="intro">
-        <p>Independent game and app development and publishing.</p>
-        <p>We make indie games and apps.</p>
-      </div>
-      <section class="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Current projects</h2>
-        <ul class="project-list">
-          <li class="project">
-            <h3>Buggy Laggy's Vector Campaign</h3>
-            <p>Coming late 2026.</p>
-          </li>
-          <li class="project">
-            <h3><a class="project-link" href="https://errantant.com">Errant Ant</a></h3>
-            <p class="project-description">A reader for language learners that counts each word you meet and keeps the sentences you met it in.</p>
-            <p>Coming soon.</p>
-          </li>
-        </ul>
-      </section>
-    </div>
-  </main>
+  <TileWall>
+    <TileGroup title="Errant Ant" id="errant-ant" full>
+      <Tile color="var(--tile-blue)" href="https://errantant.com" class="errant-ant">
+        <img class="vui-tile-picture" src="/errant-ant.webp" alt="Errant Ant" width="1232" height="706" decoding="async" />
+        <span class="vui-tile-chip">Coming soon</span>
+      </Tile>
+    </TileGroup>
 
-  <footer class="site-footer">
-    <div class="contact">
-      <span class="contact-label">Contact Us:</span>
-      <div class="icon-links">
-        <a class="icon-link" href="mailto:dev@buggylaggy.com" aria-label="Email Buggy Laggy" title="Email">
-          <img src="/icons/email.svg" width="123" height="89" alt="" />
-        </a>
-        <a class="icon-link" href="https://github.com/buggylaggy" target="_blank" rel="noreferrer" aria-label="Visit Buggy Laggy on GitHub" title="GitHub">
-          <img src="/icons/github.svg" width="512" height="500" alt="" />
-        </a>
-      </div>
-    </div>
-    <div class="legal">
-      <p>© 2026 Buggy Laggy Limited</p>
-    </div>
-  </footer>
+    <TileGroup title="Buggy Laggy" id="studio">
+      <Tile cols={4} rows={2} color="var(--tile-blue)" class="studio">
+        <img class="studio-logo" src="/logo.png" alt="" width="160" height="160" />
+        <p class="studio-text">We make indie games and apps.</p>
+      </Tile>
+      <Tile cols={4} rows={2} color="var(--tile-slate)" title="Buggy Laggy's Vector Campaign" caption="Coming late 2026" />
+    </TileGroup>
+
+    <TileGroup title="Contact" id="contact">
+      <Tile cols={2} color="var(--tile-steel)" title="Email" href="mailto:dev@buggylaggy.com">
+        <img class="tile-icon" src="/icons/email.svg" alt="" width="123" height="89" />
+      </Tile>
+      <Tile cols={2} color="var(--tile-navy)" title="GitHub" href="https://github.com/buggylaggy" target="_blank" rel="noreferrer">
+        <img class="tile-icon" src="/icons/github.svg" alt="" width="512" height="500" />
+      </Tile>
+    </TileGroup>
+  </TileWall>
+
+  <footer class="site-footer">© 2026 Buggy Laggy Limited</footer>
 </BaseLayout>
